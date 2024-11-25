@@ -1,0 +1,80 @@
+<form [formGroup]="formulario" (ngSubmit)="addCuchillo()">
+
+<div>
+<label for="nombre">Nombre</label>
+<input type="text" name="nombre" id="nombre" formControlName="nombre">
+
+@if (formulario.controls["nombre"].getError("required") && formulario.controls["nombre"].touched) {
+    <p>Campo requerido</p>
+}
+</div>
+
+
+<div>
+<label for="tipo">Tipo</label>
+<select name="tipo" id="tipo" formControlName="tipo">
+@for (item of tipos; track $index) {
+    <option [ngValue]="tipos[$index]"> {{tipos[$index]}} </option>
+}
+</select>
+@if (formulario.controls["tipo"].getError("required") && formulario.controls["tipo"].touched) {
+    <p>Campo requerido</p>
+}
+</div>
+
+
+<div>
+    <label for="filo">Filo</label>
+    <select name="filo" id="filo" formControlName="filo">
+@for (item of filos; track $index) {
+    <option [ngValue]="filos[$index]" >{{filos[$index]}}</option>
+}
+    </select>
+@if (formulario.controls["filo"].getError("required") && formulario.controls["filo"].touched) {
+    <p>Campo requerido</p>
+}
+</div>
+
+<div>
+    <label for="hoja">Hoja</label>
+    <select name="hoja" id="hoja" formControlName="hoja">
+@for (item of materialHoja; track $index) {
+    <option [ngValue]="materialHoja[$index]">{{materialHoja[$index]}}</option>
+}
+    </select>
+
+    @if (formulario.controls["hoja"].getError("required") && formulario.controls["hoja"].touched) {
+        <p>campo requerido</p>
+    }
+</div>
+
+<div>
+    <label for="mango">Mango</label>
+    <select name="mango" id="mango" formControlName="mango">
+@for (item of materialMango; track $index) {
+    <option [ngValue]="materialMango[$index]">{{materialMango[$index]}}</option>
+}
+    </select>
+    @if (formulario.controls["mango"].getError("required") && formulario.controls["mango"].touched) {
+        <p>Campo requerido</p>
+    }
+</div>
+
+<div>
+<label for="longHoja">Longitud de Hoja cm</label>
+<input type="number" name="longHoja" id="longHoja" formControlName="longHoja">
+@if (formulario.controls["longHoja"].getError("min") && formulario.controls["longHoja"].touched) {
+    <p>Debe ser mayor a 1</p>
+}
+</div>
+
+<div>
+    <label for="longTotal">longitud total</label>
+    <input type="number" name="longTotal" id="longHoja" formControlName="longTotal">
+    @if (formulario.controls["longTotal"].getError("min") && formulario.controls["tipo"].touched) {
+        <p>Debe ser mayor a 1</p>
+    }
+</div>
+
+<button type="submit">Agregar</button>
+</form>

@@ -1,0 +1,6 @@
+@for (cuchillo of listaCuchillos; track $index) {
+
+    <app-card-cuchillo (deleteEvent)="deleteEvent($event)" (detailEvent)="detailEvent($event)" [cuchillo]="cuchillo"></app-card-cuchillo>
+}@empty {
+    <p>Lista Vacia</p>
+}

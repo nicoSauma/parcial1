@@ -1,0 +1,12 @@
+div{
+    display: flex;
+  justify-content: space-between; /* Distribuye los elementos en una sola línea */
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  border: 1px solid #ccc; /* Opcional: bordes para separar cada cuchillo */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo claro */
+  margin: 0.5rem auto; /* Espaciado entre filas y centrado horizontal */
+  width: 80%; /* Deja márgenes libres a los lados */
+  box-sizing: border-box;
+}

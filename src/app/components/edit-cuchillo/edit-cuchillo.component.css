@@ -1,0 +1,57 @@
+.knife-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .main-info {
+    margin-bottom: 20px;
+  }
+  
+  .additional-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  
+
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label{
+    flex: 1;
+    text-align: left;
+    padding-right: 1rem;
+
+}
+
+input,select{
+    flex: 2;
+    text-align: center;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-right: 1rem; /* Espaciado entre el input y los mensajes */
+    box-sizing: border-box;
+}
+
+p{
+    flex: 3;
+    text-align: right;
+    color: red;
+}

@@ -1,0 +1,24 @@
+{
+  "cuchillos": [
+    {
+      "id": "8d8b",
+      "nombre": "sds",
+      "tipo": "chef",
+      "filo": "liso",
+      "hoja": "acero inoxidable",
+      "mango": "madera",
+      "longHoja": 112,
+      "longTotal": 21
+    },
+    {
+      "id": "13bd",
+      "nombre": "thh",
+      "tipo": "chef",
+      "filo": "liso",
+      "hoja": "acero inoxidable",
+      "mango": "madera",
+      "longHoja": 3443,
+      "longTotal": 432
+    }
+  ]
+}
